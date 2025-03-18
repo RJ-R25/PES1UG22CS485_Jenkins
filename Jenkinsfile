@@ -16,8 +16,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the C++ application...'
-                sh 'cp my_program /usr/local/bin/'  // Simulated deployment
-                echo 'Deployment Successful'
+                sh 'mkdir -p $HOME/bin && cp my_program $HOME/bin/'
+                echo 'Deployment Successful! Executable placed in $HOME/bin/'
             }
         }
     }
