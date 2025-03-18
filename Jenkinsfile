@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ --invalidflag my_program.cpp'  // Intentional error
+                sh 'g++ -o my_program my_program.cpp'  // Correct compilation command
                 echo 'Build Stage Successful'
             }
         }
